@@ -4,7 +4,7 @@ orbs:
 jobs:
   install:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     resource_class: large
 
     working_directory: ~/react-spectrum
@@ -40,7 +40,7 @@ jobs:
 
   test:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
 
     working_directory: ~/react-spectrum
     steps:
@@ -53,7 +53,7 @@ jobs:
 
   lint:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
 
     working_directory: ~/react-spectrum
     steps:
@@ -66,7 +66,7 @@ jobs:
 
   storybook:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     resource_class: large
 
     working_directory: ~/react-spectrum
@@ -84,7 +84,7 @@ jobs:
             - '*/storybook/'
   docs:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     resource_class: xlarge
 
     working_directory: ~/react-spectrum
@@ -103,7 +103,7 @@ jobs:
 
   docs-production:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     resource_class: large
 
     working_directory: ~/react-spectrum
@@ -143,7 +143,7 @@ jobs:
 
   comment:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     working_directory: ~/react-spectrum
     steps:
       - checkout
@@ -159,7 +159,7 @@ jobs:
 
   publish-nightly:
     docker:
-      - image: circleci/node:12.10
+      - image: circleci/node:12
     resource_class: xlarge
     working_directory: ~/react-spectrum
     steps:
